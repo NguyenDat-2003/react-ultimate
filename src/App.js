@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.scss";
+import Home from "./components/Home";
+import AddNewProduct from "./components/AddNewProduct";
+//JSX
+// function App() {
+const App = () => {
+  const x = [1, 2, 3, { name: "eric" }];
+  // const x = { name: 'eric' }
 
-function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header content-left">
+        {" "}
+        inline
+        <div style={{ textAlign: "center" }}>
+          {" "}
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello world React with x = {JSON.stringify(x)}
+          {console.log("values x = ", x)}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Home />
       </header>
+      <div className="content-right">
+        <AddNewProduct />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
