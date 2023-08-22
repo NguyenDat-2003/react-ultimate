@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.scss";
 import Home from "./components/Home";
 import AddNewProduct from "./components/AddNewProduct";
+import Product from "./components/Products/Product";
 //JSX
 // function App() {
 const App = () => {
@@ -25,6 +26,8 @@ const App = () => {
       </header>
       <div className="content-right">
         <AddNewProduct />
+        <hr />
+        <Product />
       </div>
     </div>
   );
